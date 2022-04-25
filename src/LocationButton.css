@@ -1,0 +1,13 @@
+.location-btn {
+  background-color: transparent;
+  box-shadow: 2px 2px 10px #423f3e;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border-color: white;
+  transition: 250ms ease-in-out;
+}
+
+.location-icon {
+  color: wheat;
+  font-size: 18px;
+}

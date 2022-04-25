@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 19px;
+}
+
+.mph,
+.percent,
+.pressure {
+  color: #11468f;
+}
