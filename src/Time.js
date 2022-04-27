@@ -2,5 +2,12 @@ import React from "react";
 import "./Time.css";
 
 export default function Time() {
-  return <span className="col-6 time">12:45 PM</span>;
+  let currentTime = new Date();
+
+  let time = currentTime.toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
+  return <span className="col-6 time">{time}</span>;
 }
