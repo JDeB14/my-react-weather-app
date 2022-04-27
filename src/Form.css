@@ -5,4 +5,9 @@ form {
   background-color: transparent;
   box-shadow: 3px 3px 5px grey;
   transition: 250ms ease-in-out;
+  margin-left: 5px;
+}
+
+.search-btn:hover {
+  background-color: #11468f;
 }
