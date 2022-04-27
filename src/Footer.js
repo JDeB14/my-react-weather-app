@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="Footer">
       <a
         href="https://github.com/JDeB14/my-react-weather-app"
         rel=" noopener noreferrer"

@@ -1,15 +1,15 @@
-.footer {
+.Footer {
   text-align: center;
   margin: 10px auto;
 }
-.name {
+.Footer .name {
   color: #ffb319;
 }
-a {
+.Footer a {
   text-decoration: none;
   color: white;
 }
 
-a:hover {
+.Footer a:hover {
   color: #ffb319;
 }
