@@ -11,7 +11,17 @@ export default function Footer() {
       >
         Open-source code
       </a>
-      <span className="name"> by Jae DeBerry</span>
+      <span className="name">
+        {" "}
+        by{" "}
+        <a
+          href="https://relaxed-pixie-2dceb4.netlify.app"
+          rel=" noopener noreferrer"
+          target="_blank"
+        >
+          Jae DeBerry
+        </a>
+      </span>
     </div>
   );
 }
