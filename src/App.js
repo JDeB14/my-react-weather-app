@@ -69,7 +69,11 @@ function App() {
             </div>
             <div className="col future">
               <div className="day">{weatherData.forecastDay}</div>
-              <div className="emoji">❄️</div>
+              <div className="emoji">
+                <span role="img" aria-label="emoji">
+                  ❄️
+                </span>
+              </div>
             </div>
             <div className="col future">
               <div className="day">{weatherData.forecastDay}</div>
