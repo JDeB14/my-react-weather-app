@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SearchedCityAndDate() {
+export default function SearchedCityAndDate(props) {
   let currentDate = new Date();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let months = [
@@ -19,12 +19,10 @@ export default function SearchedCityAndDate() {
   let day = days[currentDate.getDay()];
   let month = months[currentDate.getMonth()];
   let date = currentDate.getDate();
-  let weatherData = {
-    searchedCity: "Memphis",
-  };
+  
   return (
     <div>
-      <h3 className="default-color">{weatherData.searchedCity}</h3>
+      <h3 className="default-color">{props.city}</h3>
       <h6 className="color">
         {day}, {month} {date}
       </h6>

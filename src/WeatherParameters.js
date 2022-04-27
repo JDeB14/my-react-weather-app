@@ -1,23 +1,17 @@
 import React from "react";
 import "./WeatherParameters.css";
 
-export default function WeatherParameters() {
-  let weatherData = {
-    feelsLike: 60,
-    humidity: 52,
-    wind: 21,
-    pressure: 1021,
-  };
+export default function WeatherParameters(props) {
   return (
     <div className="row">
       <div className="col-6">
         <ul>
           <li className="color">
             Feels Like:{" "}
-            <span className="percent">{weatherData.feelsLike}°</span>
+            <span className="percent">{Math.round(props.feelsLike)}°</span>
           </li>
           <li className="color">
-            Humidity: <span className="percent">{weatherData.humidity}%</span>
+            Humidity: <span className="percent">{props.humidity}%</span>
           </li>
         </ul>
       </div>
@@ -27,13 +21,12 @@ export default function WeatherParameters() {
             Wind:
             <span className="mph">
               {" "}
-              <span>{weatherData.wind} MPH</span>
+              <span>{Math.round(props.wind)} MPH</span>
               <i className="fa-solid fa-wind"></i>
             </span>
           </li>
           <li className="color">
-            Pressure:{" "}
-            <span className="pressure">{weatherData.pressure} hPa</span>
+            Pressure: <span className="pressure">{props.pressure} hPa</span>
           </li>
         </ul>
       </div>
