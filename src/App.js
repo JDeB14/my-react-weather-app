@@ -7,15 +7,14 @@ import SearchedCityAndDate from "./SearchedCityAndDate";
 import MainTemp from "./MainTemp";
 import WeatherIcon from "./WeatherIcon";
 import WeatherParameters from "./WeatherParameters";
+import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 function App() {
   const [ready, setReady] = useState(false);
   const [city, setCity] = useState("Memphis");
   const [weatherInfo, setWeatherInfo] = useState({});
-  let weatherData = {
-    forecastDay: "Mon",
-  };
+
 
   function showWeatherData(response) {
     setReady(true);
@@ -102,32 +101,7 @@ function App() {
             <h2 className="forecast">5 Day Forecast</h2>
             <br />
             <div className="daily-forecast"></div>
-            <div className="row">
-              <div className="col future-first">
-                <div className="day">{weatherData.forecastDay}</div>
-                <div className="emoji">🌧</div>
-              </div>
-              <div className="col future">
-                <div className="day">{weatherData.forecastDay}</div>
-                <div className="emoji">🌫</div>
-              </div>
-              <div className="col future">
-                <div className="day">{weatherData.forecastDay}</div>
-                <div className="emoji">
-                  <span role="img" aria-label="emoji">
-                    🌨
-                  </span>
-                </div>
-              </div>
-              <div className="col future">
-                <div className="day">{weatherData.forecastDay}</div>
-                <div className="emoji">⛈</div>
-              </div>
-              <div className="col future-last">
-                <div className="day">{weatherData.forecastDay}</div>
-                <div className="emoji">🌥</div>
-              </div>
-            </div>
+            <Forecast />
           </div>
         </div>
         <Footer />

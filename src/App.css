@@ -76,19 +76,8 @@ form {
   text-decoration: underline 3px;
   color: #332fd0;
 }
-.day,
-.H {
-  color: ghostwhite;
-  font-size: 20px;
-}
-.L {
-  color: ghostwhite;
-  font-size: 20px;
-  opacity: 0.7;
-}
-.emoji {
-  font-size: 40px;
-}
+
+
 .future {
   text-align: center;
   border: 2px groove #332fd0;

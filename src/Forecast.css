@@ -1,0 +1,13 @@
+.day,
+.H {
+  color: beige;
+  font-size: 20px;
+}
+.L {
+  color: beige;
+  font-size: 20px;
+  opacity: 0.7;
+}
+.emoji {
+  font-size: 40px;
+}
