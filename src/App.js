@@ -6,6 +6,7 @@ import LocationButton from "./LocationButton";
 import Time from "./Time";
 import SearchedCityAndDate from "./SearchedCityAndDate";
 import MainTemp from "./MainTemp";
+import WeatherIcon from "./WeatherIcon";
 import WeatherParameters from "./WeatherParameters";
 import Footer from "./Footer";
 
@@ -15,7 +16,7 @@ function App() {
   const [weatherInfo, setWeatherInfo] = useState({});
   let weatherData = {
     forecastDay: "Mon",
-    emojiIcon: "🌤",
+    emojiIcon: "🌫",
   };
 
   function showWeatherData(response) {
@@ -26,8 +27,9 @@ function App() {
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
-      description: response.data.weather[0].main,
+      description: response.data.weather[0].description,
       cityName: response.data.name,
+      iconDescription: response.data.weather[0].main,
     });
   }
   function search() {
@@ -80,8 +82,8 @@ function App() {
                 </div>
                 <div className="col-5">
                   <div className="sun">
-                    <span role="img" aria-label="sunEmoji">
-                      ☀️
+                    <span role="img" aria-label="icons">
+                      <WeatherIcon iconDescription={weatherInfo.iconDescription} />
                     </span>
                   </div>
                   <p className="description">{weatherInfo.description}</p>
@@ -112,7 +114,7 @@ function App() {
                 <div className="day">{weatherData.forecastDay}</div>
                 <div className="emoji">
                   <span role="img" aria-label="emoji">
-                    ❄️
+                    🌨
                   </span>
                 </div>
               </div>
