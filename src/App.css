@@ -18,38 +18,45 @@ h6 {
 }
 
 .top-half {
-  border: 2px groove wheat;
+  border: 2px groove #332fd0;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 3px 3px 5px black;
 }
+
 form {
   text-align: center;
 }
+::placeholder {
+  color: black;
+}
 .search-btn {
-  background-color: transparent;
+  background-color: #332fd0;
   box-shadow: 3px 3px 5px grey;
   transition: 250ms ease-in-out;
   margin-left: 5px;
 }
 
 .search-btn:hover {
-  background-color: #11468f;
+  background-color: transparent;
 }
 .weather-app {
   margin: 0 auto;
   max-width: 550px;
   min-width: 500px;
-  border: 5px groove #ffb319;
+  border: 5px groove #332fd0;
   border-radius: 10px;
   box-shadow: 7px 7px 5px black;
 }
-.card {
-  background: #606470;
+.card-body {
+  background: transparent;
 }
-.default-color,
+
+.default-color {
+  color: #332fd0;
+}
 .description {
-  color: #11468f;
+  color: white;
 }
 .city-date {
   margin-top: 30px;
@@ -60,22 +67,22 @@ form {
 }
 
 .color {
-  color: #72147e;
-  font-size: 19px;
+  color: white;
+  font-size: 22px;
 }
 
 .forecast {
   text-align: center;
   text-decoration: underline 3px;
-  color: #ffb319;
+  color: #332fd0;
 }
 .day,
 .H {
-  color: #ffb319;
+  color: ghostwhite;
   font-size: 20px;
 }
 .L {
-  color: #ffb319;
+  color: ghostwhite;
   font-size: 20px;
   opacity: 0.7;
 }
@@ -84,7 +91,7 @@ form {
 }
 .future {
   text-align: center;
-  border: 2px groove wheat;
+  border: 2px groove #332fd0;
   border-radius: 4px;
   margin-right: 10px;
   padding: 10px 0;
@@ -95,7 +102,7 @@ form {
 }
 .future-first {
   text-align: center;
-  border: 2px groove wheat;
+  border: 2px groove #332fd0;
   border-radius: 4px;
   padding: 10px 0;
   margin: 0 10px 0 30px;
@@ -106,7 +113,7 @@ form {
 }
 .future-last {
   text-align: center;
-  border: 2px groove wheat;
+  border: 2px groove #332fd0;
   border-radius: 4px;
   padding: 10px 0;
   margin-right: 30px;

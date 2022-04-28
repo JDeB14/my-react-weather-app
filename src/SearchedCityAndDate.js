@@ -22,7 +22,7 @@ export default function SearchedCityAndDate(props) {
 
   return (
     <div>
-      <h3 className="default-color">{props.searchedCity}</h3>
+      <h2 className="default-color">{props.searchedCity}</h2>
       <h6 className="color">
         {day}, {month} {date}
       </h6>

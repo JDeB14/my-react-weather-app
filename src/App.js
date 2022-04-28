@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
-import Audio from "./Audio";
 import LocationButton from "./LocationButton";
 import Time from "./Time";
 import SearchedCityAndDate from "./SearchedCityAndDate";
@@ -16,7 +15,6 @@ function App() {
   const [weatherInfo, setWeatherInfo] = useState({});
   let weatherData = {
     forecastDay: "Mon",
-    emojiIcon: "🌫",
   };
 
   function showWeatherData(response) {
@@ -47,7 +45,6 @@ function App() {
   if (ready) {
     return (
       <div className="App">
-        <Audio />
         <div className="weather-app">
           <div className="card-body">
             <div className="top-half">
@@ -102,7 +99,7 @@ function App() {
               />
             </div>
             <br />
-            <h3 className="forecast">5 Day Forecast</h3>
+            <h2 className="forecast">5 Day Forecast</h2>
             <br />
             <div className="daily-forecast"></div>
             <div className="row">
@@ -112,7 +109,7 @@ function App() {
               </div>
               <div className="col future">
                 <div className="day">{weatherData.forecastDay}</div>
-                <div className="emoji">{weatherData.emojiIcon}</div>
+                <div className="emoji">🌫</div>
               </div>
               <div className="col future">
                 <div className="day">{weatherData.forecastDay}</div>
