@@ -83,10 +83,14 @@ function App() {
                 <div className="col-5">
                   <div className="sun">
                     <span role="img" aria-label="icons">
-                      <WeatherIcon iconDescription={weatherInfo.iconDescription} />
+                      <WeatherIcon
+                        iconDescription={weatherInfo.iconDescription}
+                      />
                     </span>
                   </div>
-                  <p className="description">{weatherInfo.description}</p>
+                  <p className="description text-capitalize">
+                    {weatherInfo.description}
+                  </p>
                 </div>
               </div>
               <MainTemp temp={weatherInfo.temp} />
