@@ -23,6 +23,19 @@ h6 {
   padding: 20px;
   box-shadow: 3px 3px 5px black;
 }
+form {
+  text-align: center;
+}
+.search-btn {
+  background-color: transparent;
+  box-shadow: 3px 3px 5px grey;
+  transition: 250ms ease-in-out;
+  margin-left: 5px;
+}
+
+.search-btn:hover {
+  background-color: #11468f;
+}
 .weather-app {
   margin: 0 auto;
   max-width: 550px;

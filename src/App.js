@@ -4,7 +4,6 @@ import axios from "axios";
 import Audio from "./Audio";
 import LocationButton from "./LocationButton";
 import Time from "./Time";
-import Form from "./Form";
 import SearchedCityAndDate from "./SearchedCityAndDate";
 import MainTemp from "./MainTemp";
 import WeatherParameters from "./WeatherParameters";
@@ -15,21 +14,32 @@ function App() {
   const [city, setCity] = useState("Memphis");
   const [weatherInfo, setWeatherInfo] = useState({});
   let weatherData = {
-    description: "Sunny",
     forecastDay: "Mon",
     emojiIcon: "🌤",
   };
 
   function showWeatherData(response) {
     setReady(true);
-    setCity(response.data.name);
     setWeatherInfo({
       temp: response.data.main.temp,
       feelsLike: response.data.main.feels_like,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
+      description: response.data.weather[0].main,
+      cityName: response.data.name,
     });
+  }
+  function search() {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=10cecfc6ca6c9a59ad2246de5dec6a11&units=imperial`;
+    axios.get(apiUrl).then(showWeatherData);
+  }
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
   }
 
   if (ready) {
@@ -47,12 +57,26 @@ function App() {
               </div>
               <div className="row justify-content-center">
                 <div className="col-7">
-                  <Form />
+                  <form id="search-form" onSubmit={handleSubmit}>
+                    <input
+                      type="search"
+                      placeholder="  Type a city..."
+                      className="border border-white border-2 bg-transparent rounded-pill shadow"
+                      autoFocus="on"
+                      autoComplete="off"
+                      onChange={updateCity}
+                    />
+                    <button className="border border-white border-2 rounded-pill search-btn">
+                      <span role="img" aria-label="magnifyingGlass">
+                        🔍
+                      </span>
+                    </button>
+                  </form>
                 </div>
               </div>
               <div className="row">
                 <div className="col-7 city-date">
-                  <SearchedCityAndDate city={city} />
+                  <SearchedCityAndDate searchedCity={weatherInfo.cityName} />
                 </div>
                 <div className="col-5">
                   <div className="sun">
@@ -60,7 +84,7 @@ function App() {
                       ☀️
                     </span>
                   </div>
-                  <p className="description">{weatherData.description}</p>
+                  <p className="description">{weatherInfo.description}</p>
                 </div>
               </div>
               <MainTemp temp={weatherInfo.temp} />
@@ -107,8 +131,7 @@ function App() {
       </div>
     );
   } else {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=10cecfc6ca6c9a59ad2246de5dec6a11&units=imperial`;
-    axios.get(apiUrl).then(showWeatherData);
+    search();
   }
 }
 

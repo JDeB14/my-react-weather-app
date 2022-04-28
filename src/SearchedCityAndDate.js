@@ -19,10 +19,10 @@ export default function SearchedCityAndDate(props) {
   let day = days[currentDate.getDay()];
   let month = months[currentDate.getMonth()];
   let date = currentDate.getDate();
-  
+
   return (
     <div>
-      <h3 className="default-color">{props.city}</h3>
+      <h3 className="default-color">{props.searchedCity}</h3>
       <h6 className="color">
         {day}, {month} {date}
       </h6>
