@@ -1,13 +1,46 @@
-.day,
-.H {
+.Forecast .day,
+.Forecast .H {
   color: beige;
   font-size: 20px;
 }
-.L {
+.Forecast .L {
   color: beige;
   font-size: 20px;
   opacity: 0.7;
 }
-.emoji {
+.Forecast .emoji {
   font-size: 40px;
+}
+.future {
+  text-align: center;
+  border: 2px groove #332fd0;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 10px 0;
+  box-shadow: 5px 5px 5px black;
+}
+.future:hover {
+  background-color: rgba(89, 137, 160, 0.3);
+}
+.future-first {
+  text-align: center;
+  border: 2px groove #332fd0;
+  border-radius: 4px;
+  padding: 10px 0;
+  margin: 0 10px 0 30px;
+  box-shadow: 5px 5px 5px black;
+}
+.future-first:hover {
+  background-color: rgba(89, 137, 160, 0.3);
+}
+.future-last {
+  text-align: center;
+  border: 2px groove #332fd0;
+  border-radius: 4px;
+  padding: 10px 0;
+  margin-right: 30px;
+  box-shadow: 5px 5px 5px black;
+}
+.future-last:hover {
+  background-color: rgba(89, 137, 160, 0.3);
 }

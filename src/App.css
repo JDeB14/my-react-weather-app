@@ -78,55 +78,6 @@ form {
 }
 
 
-.future {
-  text-align: center;
-  border: 2px groove #332fd0;
-  border-radius: 4px;
-  margin-right: 10px;
-  padding: 10px 0;
-  box-shadow: 5px 5px 5px black;
-}
-.future:hover {
-  background-color: rgba(89, 137, 160, 0.3);
-}
-.future-first {
-  text-align: center;
-  border: 2px groove #332fd0;
-  border-radius: 4px;
-  padding: 10px 0;
-  margin: 0 10px 0 30px;
-  box-shadow: 5px 5px 5px black;
-}
-.future-first:hover {
-  background-color: rgba(89, 137, 160, 0.3);
-}
-.future-last {
-  text-align: center;
-  border: 2px groove #332fd0;
-  border-radius: 4px;
-  padding: 10px 0;
-  margin-right: 30px;
-  box-shadow: 5px 5px 5px black;
-}
-.future-last:hover {
-  background-color: rgba(89, 137, 160, 0.3);
-}
 
-.e3 {
-  color: #e3e3e3;
-}
-.wheat {
-  color: wheat;
-}
-.ffb {
-  color: #ffb319;
-}
-.e8 {
-  color: #e8630a;
-}
-.bdaa {
-  color: #00bdaa;
-}
-.white {
-  color: white;
-}
+
+
