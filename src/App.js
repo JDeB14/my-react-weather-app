@@ -15,7 +15,6 @@ function App() {
   const [city, setCity] = useState("Memphis");
   const [weatherInfo, setWeatherInfo] = useState({});
 
-
   function showWeatherData(response) {
     setReady(true);
     setWeatherInfo({
@@ -27,6 +26,7 @@ function App() {
       description: response.data.weather[0].description,
       cityName: response.data.name,
       iconDescription: response.data.weather[0].main,
+      coords: response.data.coord,
     });
   }
   function search() {
@@ -101,7 +101,7 @@ function App() {
             <h2 className="forecast">5 Day Forecast</h2>
             <br />
             <div className="daily-forecast"></div>
-            <Forecast />
+            <Forecast coords={weatherInfo.coords} />
           </div>
         </div>
         <Footer />
