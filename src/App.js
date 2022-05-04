@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
-import LocationButton from "./LocationButton";
 import Time from "./Time";
 import SearchedCityAndDate from "./SearchedCityAndDate";
 import MainTemp from "./MainTemp";
@@ -40,6 +39,15 @@ function App() {
     event.preventDefault();
     search();
   }
+  function getCoords() {
+    navigator.geolocation.getCurrentPosition(handlePosition);
+  }
+  function handlePosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let gpsApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=36c575cad287795d9f73ee1a501c593a&units=imperial`;
+    axios.get(gpsApiUrl).then(showWeatherData);
+  }
 
   if (ready) {
     return (
@@ -49,7 +57,9 @@ function App() {
             <div className="top-half">
               <div className="row">
                 <span className="col-6">
-                  <LocationButton />
+                  <button className="buttons location-btn" onClick={getCoords}>
+                    <i className="fa-solid fa-location-arrow location-icon"></i>
+                  </button>
                 </span>
                 <Time />
               </div>
